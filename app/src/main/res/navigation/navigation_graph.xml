@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.blueradix.android.jetpack_4_navigationcomponent.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/mainToDragons"
+            app:destination="@+id/dragonsFragment"
+            app:popUpTo="@+id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dragonsFragment"
+        android:name="com.blueradix.android.jetpack_4_navigationcomponent.DragonsFragment"
+        android:label="dragons_fragment"
+        tools:layout="@layout/fragment_dragons">
+        <argument
+            android:name="message"
+            android:defaultValue="No Message"
+            app:argType="string" />
+        <action
+            android:id="@+id/dragonsToDragonDetails"
+            app:destination="@+id/dragonDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dragonDetailsFragment"
+        android:name="com.blueradix.android.jetpack_4_navigationcomponent.ui.dragons.DragonDetailsFragment"
+        android:label="dragon_details_fragment"
+        tools:layout="@layout/fragment_dragon_details">
+        <argument
+            android:name="dragon"
+            app:argType="com.blueradix.android.jetpack_4_navigationcomponent.Model.Dragon" />
+    </fragment>
+</navigation>
