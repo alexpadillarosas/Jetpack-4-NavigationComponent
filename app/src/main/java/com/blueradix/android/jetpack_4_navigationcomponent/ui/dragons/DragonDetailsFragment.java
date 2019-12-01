@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.blueradix.android.jetpack_4_navigationcomponent.Model.Dragon;
@@ -33,9 +35,10 @@ public class DragonDetailsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_dragon_details, container, false);
     }
 
+
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         TextView nameTextView = getView().findViewById(R.id.nameTextView);
         TextView descTextView = getView().findViewById(R.id.descTextView);
         ImageView dragonImageView = getView().findViewById(R.id.dragonImageView);
@@ -50,13 +53,10 @@ public class DragonDetailsFragment extends Fragment {
         DragonDetailsFragmentArgs args = DragonDetailsFragmentArgs.fromBundle(getArguments());
         Dragon dragon = args.getDragon();
 
-//        Log.i("bla", dragon.toString());
-
         nameTextView.setText(dragon.getName());
         descTextView.setText(dragon.getDescription());
         dragonImageView.setImageResource(dragon.getResId());
         typeTextView.setText(dragon.getType().toString());
-
 
     }
 }

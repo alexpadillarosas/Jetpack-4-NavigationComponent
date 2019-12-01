@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -69,22 +71,7 @@ public class DragonsFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
     /**
      * This interface must be implemented by activities that contain this
@@ -102,9 +89,8 @@ public class DragonsFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         TextView argTextView = getView().findViewById(R.id.argTextView);
         DragonsFragmentArgs args = DragonsFragmentArgs.fromBundle(getArguments());
         String message = args.getMessage();
@@ -269,6 +255,11 @@ public class DragonsFragment extends Fragment {
 
     }
 
+    /**
+     * redirects to the DragonDetailsFragment
+     * @param view  the current view for the navigation
+     * @param dragon    the object with data to pass to the destination fragment
+     */
     private void redirect(View view, Dragon dragon) {
         DragonsFragmentDirections.DragonsToDragonDetails action = DragonsFragmentDirections.dragonsToDragonDetails(dragon);
         Navigation.findNavController(view).navigate(action);
