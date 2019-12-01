@@ -1,6 +1,10 @@
 # Jetpack-4-NavigationComponent
-This app shows the usage of a splash screen and the navigation component, basically passing object as parameters.
-The splash screen is used as a new theme.
+Based on a default project template Fragment + ViewModel.
+
+This app shows the usage of a splash screen and the navigation component, basically passing an object as parameter.
+
+The splash screen is used as a new theme, hence there is no activity for the splash screen which otherwise will make the user wait a defined period of time before showing the first screen of your app.
+
 This version uses buttons to send different information to the next fragment(dragon's detail fragment).
 We also use safeargs to pass the information via navigation controller.
 
