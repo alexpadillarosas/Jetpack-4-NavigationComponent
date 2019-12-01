@@ -19,7 +19,7 @@ next refence it in the AndroidManifest.xml file, change the theme of your entryp
 ```xml
 <activity android:name=".MainActivity" android:theme="@style/SplashTheme">
 ```
-Lastly, do not forget to set the original theme(Base application theme) of your MainActivity back, otherwise it will have the image as background. 
+Lastly, do not forget to set the original theme(Base application theme, in this example AppTheme) of your MainActivity back, otherwise it will have the image as background. 
 in the onCreate method of your MainActivity, before the super, add:
 ```java
 setTheme(R.style.AppTheme);
@@ -29,7 +29,7 @@ That's all, it will show the spash screen image while your Activity is loading, 
 ## Basic NavigationComponent application
 ![storyboard](https://user-images.githubusercontent.com/4823319/69899538-e4672b00-13bb-11ea-82b8-1bef8b71e1b5.jpg)
 
-Notice that there is no splash activity.
+Notice that there is no splash activity in the navigation graph.
 
 ## Splash image shown while the MainActivity is loading (just a simple jpg image: @drawable/httyd_splash_background)
 <img src="https://user-images.githubusercontent.com/4823319/69899539-e4672b00-13bb-11ea-846b-5171be33301e.jpg" width="40%" height="40%">
