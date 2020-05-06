@@ -1,6 +1,6 @@
 package com.blueradix.android.jetpack_4_navigationcomponent.ui.main;
 
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 
@@ -38,7 +38,10 @@ public class MainFragment extends Fragment {
 
 
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+
+//        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+
+        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         //get the id of the button from the view
         Button button = getView().findViewById(R.id.button);

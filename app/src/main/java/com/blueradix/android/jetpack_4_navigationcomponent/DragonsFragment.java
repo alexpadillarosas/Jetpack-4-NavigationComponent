@@ -1,6 +1,5 @@
 package com.blueradix.android.jetpack_4_navigationcomponent;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -24,7 +23,7 @@ import com.blueradix.android.jetpack_4_navigationcomponent.Model.DragonType;
  * Activities that contain this fragment must implement the
  * {@link DragonsFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link DragonsFragment#newInstance} factory method to
+ * Use the {@link DragonsFragment #newInstance} factory method to
  * create an instance of this fragment.
  */
 public class DragonsFragment extends Fragment {
