@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.blueradix.android.jetpack_4_navigationcomponent.ui.dragons.DragonsFragment;
+
 public class MainActivity extends AppCompatActivity implements  DragonsFragment.OnFragmentInteractionListener {
 
     @Override

@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/dragonsFragment"
-        android:name="com.blueradix.android.jetpack_4_navigationcomponent.DragonsFragment"
+        android:name="com.blueradix.android.jetpack_4_navigationcomponent.ui.dragons.DragonsFragment"
         android:label="dragons_fragment"
         tools:layout="@layout/fragment_dragons">
         <argument

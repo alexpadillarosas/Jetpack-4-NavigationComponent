@@ -34,13 +34,8 @@ public class MainFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-
-
-        super.onActivityCreated(savedInstanceState);
-
-//        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         //get the id of the button from the view
@@ -70,8 +65,8 @@ public class MainFragment extends Fragment {
         button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.mainToSecond, null)
 
         */
-
-
     }
+
+
 
 }

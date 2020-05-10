@@ -1,4 +1,4 @@
-package com.blueradix.android.jetpack_4_navigationcomponent;
+package com.blueradix.android.jetpack_4_navigationcomponent.ui.dragons;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,8 +14,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.blueradix.android.jetpack_4_navigationcomponent.DragonsFragmentArgs;
+import com.blueradix.android.jetpack_4_navigationcomponent.DragonsFragmentDirections;
 import com.blueradix.android.jetpack_4_navigationcomponent.Model.Dragon;
 import com.blueradix.android.jetpack_4_navigationcomponent.Model.DragonType;
+import com.blueradix.android.jetpack_4_navigationcomponent.R;
 
 
 /**
